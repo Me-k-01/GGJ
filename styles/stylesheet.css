@@ -1,6 +1,6 @@
 html {
-  background-color:  #323232 ;
+  background-color:  #111111 ;
 }
-canvas.main {
+canvas#world {
   background-color:  #323232;
 }
