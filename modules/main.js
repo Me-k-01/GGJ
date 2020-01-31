@@ -30,7 +30,7 @@ var render = Render.create({
 
 
  // Creations des differents element body present dans le jeu
-var player = Bodies.circle(50, 50, 50, {
+var player = Bodies.circle(w / 2, h / 2, 50, {
   density: 0.04,
   friction: 0.01,
   frictionAir: 0.001,
