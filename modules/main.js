@@ -100,10 +100,10 @@ function createBody(x, y) {
 }
 
 /* Execution du moteur */
-var entities = [player] ;
-var static = [ground,floor, wallRight,wallLeft]
+var entities = [ player ] ;
+var statics = [ ground ]
 World.add(world, entities);
-World.add(world, static);
+World.add(world, statics);
 Engine.run(engine);
 Render.run(render);
 
