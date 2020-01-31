@@ -44,7 +44,7 @@ var ground = Bodies.rectangle(w / 2, h*11/12, 2000, 100, {
   isStatic: true
 } );
 
-/*
+
 // Force de pousse exercable par le curseur.
 var mouse = Matter.MouseConstraint.create(engine, { //Create Constraint
   element: cv,
@@ -56,7 +56,7 @@ var mouse = Matter.MouseConstraint.create(engine, { //Create Constraint
   }
 });
 Matter.World.add(world, mouse);
-*/
+
 
 
 
