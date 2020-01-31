@@ -26,7 +26,7 @@ var render = Render.create({
     showAngleIndicator: false
   }
 });
-
+//Wow
 
 
  // Creations des differents element body present dans le jeu
