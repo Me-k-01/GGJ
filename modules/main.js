@@ -44,17 +44,6 @@ var ground = Bodies.rectangle(w / 2, h*11/12, 2000, 100, {
   isStatic: true
 } );
 
-var floor = Bodies.rectangle(w / 2, h*1/12, 1000, 100, {
-  isStatic: true
-} );
-
-var wallRight = Bodies.rectangle(w, h/2, 100, 1000, {
-  isStatic: true
-} );
-
-var wallLeft = Bodies.rectangle(0, h/2, 100, 1000, {
-  isStatic: true
-} );
 
 
 
@@ -72,7 +61,7 @@ Matter.World.add(world, mouse);
 
 
 
-var key = new Controller(90, 83, 81, 68) ;
+var key = new Controlddler(90, 83, 81, 68) ;
 
 
 function move( direction, obj) {
