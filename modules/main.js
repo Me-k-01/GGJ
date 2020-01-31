@@ -44,6 +44,11 @@ var ground = Bodies.rectangle(w / 2, h*11/12, 2000, 100, {
   isStatic: true
 } );
 
+var plafond = Bodies.rectangle(w / 2, h*1/12, 1000, 100, {
+  isStatic: true
+} );
+
+
 
 // Force de pousse exercable par le curseur.
 var mouse = Matter.MouseConstraint.create(engine, { //Create Constraint
@@ -99,7 +104,7 @@ function createBody(x, y) {
 }
 
 /* Execution du moteur */
-var entities = [player, ground] ;
+var entities = [player, ground, plafond] ;
 World.add(world, entities);
 Engine.run(engine);
 Render.run(render);
