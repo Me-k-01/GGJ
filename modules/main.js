@@ -29,8 +29,8 @@ var render = Render.create({
 
 
 
- // Creations des differents ellement body present dans le jeu
-var player = Bodies.circle(50, h*5/12, 50, {
+ // Creations des differents element body present dans le jeu
+var player = Bodies.circle(50, 50, 50, {
   density: 0.04,
   friction: 0.01,
   frictionAir: 0.001,
@@ -44,13 +44,21 @@ var ground = Bodies.rectangle(w / 2, h*11/12, 2000, 100, {
   isStatic: true
 } );
 
-var plafond = Bodies.rectangle(w / 2, h*1/12, 1000, 100, {
+var floor = Bodies.rectangle(w / 2, h*1/12, 1000, 100, {
+  isStatic: true
+} );
+
+var wallRight = Bodies.rectangle(w, h/2, 100, 1000, {
+  isStatic: true
+} );
+
+var wallLeft = Bodies.rectangle(0, h/2, 100, 1000, {
   isStatic: true
 } );
 
 
 
-// Force de pousse exercable par le curseur.
+// Force de pousse exercee par le curseur.
 var mouse = Matter.MouseConstraint.create(engine, { //Create Constraint
   element: cv,
   constraint: { // Parametre de force de contrainte
@@ -62,7 +70,6 @@ var mouse = Matter.MouseConstraint.create(engine, { //Create Constraint
 });
 Matter.World.add(world, mouse);
 
-// test encore
 
 
 var key = new Controller(90, 83, 81, 68) ;
@@ -104,8 +111,10 @@ function createBody(x, y) {
 }
 
 /* Execution du moteur */
-var entities = [player, ground, plafond] ;
+var entities = [player] ;
+var static = [ground,floor, wallRight,wallLeft]
 World.add(world, entities);
+World.add(world, static);
 Engine.run(engine);
 Render.run(render);
 
