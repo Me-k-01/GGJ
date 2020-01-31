@@ -44,7 +44,7 @@ var ground = Bodies.rectangle(w / 2, h*11/12, 2000, 100, {
   isStatic: true
 } );
 
-var floor = Bodies.rectangle(w / 2, h*1/12, 1000, 100, {
+var floor = Bodies.rectangle(w / 2, h*1/12, 2000, 100, {
   isStatic: true
 } );
 
