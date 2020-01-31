@@ -30,7 +30,7 @@ var render = Render.create({
 
 
  // Creations des differents ellement body present dans le jeu
-var player = Bodies.circle(50, 50, 50, {
+var player = Bodies.circle(50, h*5/12, 50, {
   density: 0.04,
   friction: 0.01,
   frictionAir: 0.001,
@@ -62,7 +62,7 @@ var mouse = Matter.MouseConstraint.create(engine, { //Create Constraint
 });
 Matter.World.add(world, mouse);
 
-// test
+// test encore
 
 
 var key = new Controller(90, 83, 81, 68) ;
